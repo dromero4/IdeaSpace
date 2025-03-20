@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Index } from './Index.jsx';
 import { LeftNavbar } from './LeftNavbar.jsx';
 import { useState } from 'react';
+import { Articles } from './Articles.jsx';
+import { News } from './News.jsx';
+import { Friends } from './Friends.jsx';
+import { GChat } from './PChat.jsx';
+import { Profile } from './Profile.jsx';
 
 export function Topnavbar() {
     const [open, setOpen] = useState(false);
@@ -18,12 +23,18 @@ export function Topnavbar() {
                     </Link>
                 </nav>
 
+                {open && <LeftNavbar setOpen={setOpen} />}
 
                 <Routes>
                     <Route path="/" element={<Index />} />
+                    <Route path="/articles" element={<Articles />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/friends" element={<Friends />} />
+                    <Route path="/global-chat" element={<GChat />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/global-chat" element={<GChat />} />
                 </Routes>
 
-                {open && <LeftNavbar setOpen={setOpen} />}
             </Router>
 
         </>

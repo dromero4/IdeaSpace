@@ -2,6 +2,7 @@ import { Home, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Options } from './options/navbar-options';
 
+
 export function LeftNavbar({ setOpen }) {
     return (
         <aside className={`absolute top-0 h-full w-75 bg-navbar-light ${setOpen ? 'block' : 'hidden'}`}>
@@ -13,19 +14,24 @@ export function LeftNavbar({ setOpen }) {
             </div>
 
             <hr className='mx-5 opacity-25' />
-            {/* top */}
+
+            {/* top options */}
             <div className='flex flex-col'>
-                <Options svg={'./img/options-img/article.svg'} text={"Articles"} />
-                <Options svg={'./img/options-img/news.svg'} text={"News"} />
-                <Options svg={'./img/options-img/friends.svg'} text={"Friends"} />
-                <Options svg={'./img/options-img/chat.svg'} text={"Global Chat"} />
+                <Link to='/articles' onClick={() => setOpen(false)}><Options svg={'./img/options-img/article.svg'} text={"Articles"} /></Link>
+                <Link to='/news' onClick={() => setOpen(false)}><Options svg={'./img/options-img/news.svg'} text={"News"} /></Link>
+                <Link to='/friends' onClick={() => setOpen(false)}><Options svg={'./img/options-img/friends.svg'} text={"Friends"} /></Link>
+                <Link to='/global-chat' onClick={() => setOpen(false)}><Options svg={'./img/options-img/chat.svg'} text={"Global Chat"} /></Link>
             </div>
 
-            {/* bottom */}
+            {/* bottom options*/}
             <div className='absolute bottom-0 mb-1 w-full'>
-                <Options svg={'./img/options-img/profile.svg'} text={"Profile"} />
-                <Options svg={'./img/options-img/settings.svg'} text={"Settings"} />
+                <Link to='/profile' onClick={() => setOpen(false)}><Options svg={'./img/options-img/profile.svg'} text={"Profile"} /></Link>
+                <Link to='/settings' onClick={() => setOpen(false)}><Options svg={'./img/options-img/settings.svg'} text={"Settings"} /></Link>
+
+
             </div>
+
+
         </aside>
 
     );
