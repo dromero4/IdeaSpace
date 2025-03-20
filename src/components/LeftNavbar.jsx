@@ -1,6 +1,6 @@
 import { Home, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Options } from './options/navbar-options';
+import { Options } from './navbar-options';
 
 
 export function LeftNavbar({ setOpen }) {

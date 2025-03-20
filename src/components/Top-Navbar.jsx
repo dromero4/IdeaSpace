@@ -1,13 +1,13 @@
 import { Home, Menu } from 'lucide-react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { Index } from './Index.jsx';
+import { Index } from '../pages/Index.jsx';
 import { LeftNavbar } from './LeftNavbar.jsx';
 import { useState } from 'react';
-import { Articles } from './Articles.jsx';
-import { News } from './News.jsx';
-import { Friends } from './Friends.jsx';
-import { GChat } from './PChat.jsx';
-import { Profile } from './Profile.jsx';
+import { Articles } from '../pages/Articles.jsx';
+import { News } from '../pages/News.jsx';
+import { Friends } from '../pages/Friends.jsx';
+import { GChat } from '../pages/GChat.jsx';
+import { Profile } from '../pages/Profile.jsx';
 
 export function Topnavbar() {
     const [open, setOpen] = useState(false);
