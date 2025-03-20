@@ -20,6 +20,8 @@ app.use(express.static(publicPath));
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
+const PORT = 8180;
+
 wss.on("connection", (ws) => {
     console.log("Cliente conectado");
 
@@ -43,6 +45,6 @@ app.get("*", (req, res) => {
 });
 
 // Iniciar servidor en puerto 8180
-server.listen(8180, () => {
-    console.log("Servidor WebSocket y React en el puerto 8180 🚀");
+server.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
 });

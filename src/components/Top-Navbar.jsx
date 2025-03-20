@@ -9,7 +9,9 @@ import { Friends } from '../pages/Friends.jsx';
 import { GChat } from '../pages/GChat.jsx';
 import { Profile } from '../pages/Profile.jsx';
 
+
 export function Topnavbar() {
+
     const [open, setOpen] = useState(false);
 
     return (
@@ -17,7 +19,7 @@ export function Topnavbar() {
             <Router>
                 {/* Menu superior */}
                 <nav className="flex items-center w-full h-20 bg-navbar-light shadow-md">
-                    <Menu className="w-8 h-8 mx-5 cursor-pointer" onClick={() => setOpen(!open)} />
+                    <Menu className="w-8 h-8 mx-5" onClick={() => setOpen(!open)} />
                     <Link to="/">
                         <Home className="w-8 h-8" />
                     </Link>
